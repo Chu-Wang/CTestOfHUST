@@ -1,0 +1,24 @@
+两个实数的四则运算——改编自习题4.5#作业：71，归档：20191010012720     关闭当前页面
+描述
+· 问题描述： 
+   编写程序实现以下功能：输入两个实数（范围在-100000~100000之间）和一个四则运算符（+，-，*，/），根据运算符执行相应的运算并输出运算结果，要求分别用if语句和switch语句来实现。
+· 输入要求：
+   每组测试数据输入占一行，包括处理方式（t），两个实数(均不为零)和一个四则运算符号，四者之间用空格隔开，遇文件尾测试结束。当t=0时，输出用if语句处理后的结果；当t=1时，输出用switch语句处理后的结果；当t=2时，同时输出两种语句处理后的结果。
+· 输出要求： 
+   每组测试样例的输出结果占一行，结果保留两位小数，相邻两组测试样例的输出结果之间空一行。
+
+样例输入
+1 -6.2 -9.3 +
+2 2 -2 -
+2 8 5 /
+0 4 7.2 *
+样例输出
+After switch processing,the result is : -15.50
+
+After if-else processing,the result is : 4.00
+After switch processing,the result is : 4.00
+
+After if-else processing,the result is : 1.60
+After switch processing,the result is : 1.60
+
+After if-else processing,the result is : 28.80
