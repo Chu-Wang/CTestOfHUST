@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b;
+    int m,n,e;
+    scanf("%d %d",&a,&b);
+    m = a;
+    n = b;
+    while ((a!=0)||(b!=0))
+    {
+        if(a>=b)
+        {
+            int r;
+            r=a%b;
+            while(r != 0)
+            {
+            a = b;
+            b = r;
+            r = a%b;
+            }
+            e = ((m*n)/b);
+            printf("%d %d\n",b,e);
+        }
+        else
+        {
+            int r;
+            r = a;
+            a = b;
+            b = r;
+            r = a%b;
+            while(r != 0)
+            {
+            a = b;
+            b = r;
+            r = a%b;
+            }
+            e = ((m*n)/b);
+            printf("%d %d\n",b,e);
+        }
+         scanf("%d %d",&a,&b);
+         m = a;
+         n = b;
+    }
+    return 0;
+}
