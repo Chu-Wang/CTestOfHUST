@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int N;
+	scanf("%d", &N);
+	getchar();
+	while (N){
+		short int input;
+		char low, high;
+		scanf("%hd", &input);
+		getchar();
+		low = 0x00ff & input;
+		high = 0x00ff & (input >> 8);
+		printf("%c,%c\n", high, low);
+		N--;
+	}
+	
+	return 0;
+}
