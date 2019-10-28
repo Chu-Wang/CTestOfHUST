@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N,t;
+    scanf("%d",&N);
+    getchar();
+    while(N-->0)
+    {
+       scanf("%d",&t);
+       if(t==0)
+       {
+       int a,i,k,x;
+       for(a=i=k=0;i<10;++i)
+          {
+             scanf("%d",&x);
+             if(x<=0) continue;
+             a=a+x;
+             ++k;
+          }
+       if(k){
+              printf("In \"continue\" way,numbers=%d,average=%f\n",k,1.0*a/k);
+            }else{
+                printf("no positive number!\n");
+       }
+       }
+       if(t==1)
+       {
+           int a,i,k,x;
+           for(a=i=k=0;i<10;++i)
+              {
+
+                 scanf("%d",&x);
+                 if(x>0)
+                 {
+                     a=a+x;
+                     ++k;
+                 }
+                 else ;
+
+              }
+       if(k){
+              printf("In \"no continue\" way,numbers=%d,average=%f\n",k,1.0*a/k);
+            }else{
+                printf("no positive number!\n");
+       }
+
+      }
+    }
+    return 0;
+}
