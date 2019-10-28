@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int N;
+	scanf("%d", &N);
+	getchar();
+	while (N){
+		unsigned short int res;
+		unsigned short int high = 0xf000;
+		unsigned short int low = 0x000f;
+		scanf("%hd", &res);
+		getchar();
+		res =((res & high) >> 12 | (res & low) << 12 | (res & 0x0ff0));
+		printf("%u\n", res);
+		N--;
+	}
+	
+	return 0;
+}
