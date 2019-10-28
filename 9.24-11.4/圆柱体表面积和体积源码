@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.1415926
+int main(){
+	int N;
+	scanf("%d", &N);
+	getchar();
+	while (N){
+		double r, high;
+		double area, volume;
+		scanf("%lf%lf", &r, &high);
+		volume = PI * r * r * high;
+		area = 2 * PI * r * high + PI * r * r * 2;
+		printf("%.6lf %.6lf\n", area, volume);
+		N--;
+	}
+	
+	return 0;
+}
