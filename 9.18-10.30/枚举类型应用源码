@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+enum month {January,February,March,April,May,June,July,August,September,October,November,December};
+enum month A;
+int main(void)
+{
+
+    int N;
+    scanf("%d", &N);
+    getchar();
+    while(N){
+        int year;
+        scanf("%d",&year);
+        getchar();
+        char *yearName1[]={"  January: 31; "," February: 29; ","    March: 31; ","    April: 30; ","      May: 31; ","     June: 30; ","     July: 31; ","   August: 31; ","September: 30; ","  October: 31; "," November: 30; "," December: 31."};
+        char *yearName2[]={"  January: 31; "," February: 28; ","    March: 31; ","    April: 30; ","      May: 31; ","     June: 30; ","     July: 31; ","   August: 31; ","September: 30; ","  October: 31; "," November: 30; "," December: 31."};
+        if ((((year%4 == 0))&&(year%100 != 0))||(year%400 == 0))
+        {
+            int i = 1;
+            for (A=January;A<December;A++)
+            {
+                if(i % 7 == 0){
+                    printf("\n");
+                }
+                printf("%15s",yearName1[A]);
+                i++;
+            }
+            printf("%14s\n",yearName2[December]);
+
+        }
+        else
+        {
+            int i = 1;
+            for (A=January;A<December;A++)
+            {
+                if(i % 7 == 0){
+                    printf("\n");
+                }
+                printf("%15s",yearName2[A]);
+                i++;
+            }
+            printf("%14s\n",yearName2[December]);
+        }
+        N--;
+    }
+
+
+    return 0;
+}
