@@ -1,0 +1,26 @@
+枚举类型应用#作业：3，归档：20190918090559     关闭当前页面
+描述
+﻿
+· 问题描述： 
+   编写程序实现以下功能：定义一个枚举类型enum month，用来描述一年12个月：一月（Jan）、二月（Feb）、……、十二月（Dec），根据用户输入的年份，输出该年对应各月的英文名称及天数。
+· 输入要求：
+   第一行为正整数N，表示有N组输入；每组输入一个年份（假设的年份数据都是四位整数，不需要做数据的合法性判断）。
+· 输出要求： 
+   每组输入对应一行输出，输出相应年份对应的各月的英文名称和天数（注意分号占两位左对齐、句点占一位，月份英文名称占9位,天数占3位，每行输出6个月），并以换行符结束。
+
+
+样例输入
+4
+1990
+1995
+2012
+2018
+样例输出
+  January: 31;  February: 28;     March: 31;     April: 30;       May: 31;      June: 30; 
+     July: 31;    August: 31; September: 30;   October: 31;  November: 30;  December: 31.
+  January: 31;  February: 28;     March: 31;     April: 30;       May: 31;      June: 30; 
+     July: 31;    August: 31; September: 30;   October: 31;  November: 30;  December: 31.
+  January: 31;  February: 29;     March: 31;     April: 30;       May: 31;      June: 30; 
+     July: 31;    August: 31; September: 30;   October: 31;  November: 30;  December: 31.
+  January: 31;  February: 28;     March: 31;     April: 30;       May: 31;      June: 30; 
+     July: 31;    August: 31; September: 30;   October: 31;  November: 30;  December: 31.
