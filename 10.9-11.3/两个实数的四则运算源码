@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	double a, b;
+	double c;
+	int t;
+	char op;
+	while ((scanf("%d %lf %lf %c", &t, &a, &b, &op) != EOF))
+	{
+		switch (t)
+		{
+		case 0:
+		{
+			if (op == '+')
+				c = (a + b);
+			else if (op == '-')
+				c = (a - b);
+			else if (op == '*')
+				c = (a*b);
+			else
+				c = (a / b);
+			printf("After if-else processing,the result is : %.2lf\n\n", c);
+		}
+		break;
+
+		case 1:
+		{
+			switch (op)
+			{
+			case '+': c = (a + b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			case '-': c = (a - b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			case '*': c = (a*b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			case '/': c = (a / b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+
+			}
+		}
+		break;
+
+		case 2:
+		{
+			if (op == '+')
+				c = (a + b);
+			else if (op == '-')
+				c = (a - b);
+			else if (op == '*')
+				c = (a*b);
+			else
+				c = (a / b);
+			printf("After if-else processing,the result is : %.2lf\n", c);
+			switch (op)
+			{
+			case '+': c = (a + b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			case '-': c = (a - b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			case '*': c = (a*b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			case '/': c = (a / b), printf("After switch processing,the result is : %.2lf\n\n", c); break;
+			}
+		}
+		break;
+		}
+	}
+	
+	return 0;
+}
