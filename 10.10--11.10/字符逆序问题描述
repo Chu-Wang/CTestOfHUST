@@ -1,0 +1,24 @@
+字符逆序——12.3#作业：24，归档：20191010181961     关闭当前页面
+描述
+· 问题描述： 
+   编写程序实现以下功能：将输入的一行字符逆序输出。例如，输入string，则输出gnirts。将逆序输出用递归函数实现。
+· 输入要求：
+   首先输入正整数N，表示有N组测试数据。接下来的N行，每行为一个输入的字符串。
+· 输出要求： 
+   每组输入数据对应一行输出,每组输出均以换行符结束。
+
+样例输入
+5
+Romance is the glamour which turns the dust of everyday life into a golden haze.
+ my name is     
+zhang chuan chao
+oh my      god.    .
+ oh
+样例输出
+.ezah nedlog a otni efil yadyreve fo tsud eht snrut hcihw ruomalg eht si ecnamoR
+     si eman ym 
+oahc nauhc gnahz
+.    .dog      ym ho
+ho 
+备注
+第五章作业
