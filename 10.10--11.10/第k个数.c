@@ -27,7 +27,7 @@ int main(void)
 		printf("%d\n", p);
 		m = scanf("%d%d", &x, &y);
 	}
-	system("pause");
+	
 	return 0;
 }
 
