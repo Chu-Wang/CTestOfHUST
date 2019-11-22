@@ -1,0 +1,43 @@
+统计——7.9#作业：36，归档：20191011162220     关闭当前页面
+描述
+· 问题描述： 
+   编写程序实现以下功能：从键盘输入一段文字，以‘#’结束，统计正文中每个数字字符，英文字符和其他字符出现的次数（要求用数组元素作为每个数字字符、英文字符、和其他字符出现的次数的计数器）。
+· 输入要求：
+   首先输入一正整数N，表示有N组测试数据；每组测试数据包括一段文字，并以‘#’结束。
+· 输出要求： 
+   每组测试数据对应一组输出结果，每组输出结果后空一行。
+· 输出示意图： 
+	
+
+样例输入
+2
+Hi, husters of 2019, welcome you join us on Aug. 28, 2019.#
+8228 is a good number and 14 is a bad number.#
+样例输出
+Number 0: 2
+Number 1: 2
+Number 2: 3
+Number 3: 0
+Number 4: 0
+Number 5: 0
+Number 6: 0
+Number 7: 0
+Number 8: 1
+Number 9: 2
+characters: 32
+other: 16
+
+Number 0: 0
+Number 1: 1
+Number 2: 2
+Number 3: 0
+Number 4: 1
+Number 5: 0
+Number 6: 0
+Number 7: 0
+Number 8: 2
+Number 9: 0
+characters: 28
+other: 11
+
+接受时间： 2019-10-11 18:00:00 ~ 2019-12-06 22:00:00
