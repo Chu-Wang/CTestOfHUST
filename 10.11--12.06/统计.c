@@ -5,16 +5,15 @@ void count(char rec[]);
 int main() {
 	int N;//用来接收多少组数据的N
 	scanf("%d", &N);
-	getchar();
+	getchar();//清除换行符
 	while (N--) {
 		char rec[100];//表示接收到的字符数组
-		scanf("%[^#]", rec);
+		scanf("%[^#]", rec);//接收以#结尾的字符串，正则表达式
 		getchar();
-		getchar();
-		count(rec);
+		getchar();//两次getchar函数，贼恶心，错了好几次
+		count(rec);//调用计数函数
 	}
-	
-	
+
 	//system("pause");
 	return 0;
 }
@@ -68,10 +67,9 @@ void count(char rec[]) {//传入的是字符数组
 		}
 	}
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {//先打印数字的那几行
 		printf("Number %d: %d\n",i,result[i]);
 	}
-	printf("characters: %d\n", result[10]);
-	printf("others: %d\n\n", result[11]);
-	return;
+	printf("characters: %d\n", result[10]);//打印字符计数器
+	printf("others: %d\n\n", result[11]);//others
 }
