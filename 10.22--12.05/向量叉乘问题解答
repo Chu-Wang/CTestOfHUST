@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+void vp(int *, int *, int *, int *);
+
+int main()
+{
+	int  x[3], y[3], z[3][3], r[3], *pz;
+	int  i, j;
+	while ((scanf("%d", &x[0])) != EOF) {
+		pz = *z;
+		for (i = 1; i < 3; i++)
+			scanf("%d", x + i);
+		for (i = 0; i < 3; i++)
+			scanf("%d", y + i);
+		vp(x, y, pz, r);		//叉积
+		printf("%d %d %d\n", *r, *(r + 1), *(r + 2));
+	}
+	
+	system("pause");
+	return 0;
+}
+
+void vp(int *x, int *y, int *pz, int *r)
+{
+	int i, j;
+
+	j = 'i';
+	for (i = 0; i < 3; i++)
+		*(pz + i) = j++;
+
+	for (i = 0; i < 3; i++)
+		*(pz + 3 + i) = *(x + i);
+
+	for (i = 0; i < 3; i++)
+		*(pz + 6 + i) = *(y + i);
+
+	*(r + 0) = (*(x + 1)) * (*(y + 2)) - (*(x + 2)) * (*(y + 1));
+	*(r + 1) = (*(x + 2)) * (*(y)) - (*(x)) * (*(y + 2));
+	*(r + 2) = (*(x)) * (*(y + 1)) - (*(x + 1)) * (*(y));
+}
