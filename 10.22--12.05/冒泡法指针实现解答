@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+	int num[10];//用于接收数据
+	int *p = num;//指针、指向num
+	int t;//用于中间变量交换数据
+	int i, j;
+	while ((scanf("%d", &num[0])) != EOF) {//得到第一个元素
+		for (i = 1; i < 10; i++) {//录入剩余的9个元素
+			scanf("%d", &num[i]);
+		}
+		for (i = 0; i < 10 - 1; i++) {//指针交换数组元素、冒泡法
+			for (j = 0; j < 10 - 1 - i; j++) {
+				if (*(p + j) > *(p + j + 1))
+				{
+					t = *(p + j);
+					*(p + j) = *(p + j + 1);
+					*(p + j + 1) = t;
+				}
+			}
+		}
+		for (i = 0; i < 9; i++) {//先打印前9个元素、因为要打印->
+			printf("%d->", num[i]);
+		}
+		printf("%d\n", num[9]);//最后打印最后的元素
+		
+	}
+	
+	return 0;
+
+}
