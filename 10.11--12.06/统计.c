@@ -20,6 +20,7 @@ int main() {
 
 void count(char rec[]) {//传入的是字符数组
 	int result[12] = { 0 };
+	int i, j;
 	//该整型数组，有12个元素，分别存储数字、字母、其他、出现的次数，即数组的每个元素就是计数器
 	//首先计算长度
 	int length = 0;
@@ -27,7 +28,7 @@ void count(char rec[]) {//传入的是字符数组
 		length++;
 	}
 	//经过while循环后，得到的值即为字符数组的length
-	for (int i = 0; i < length; i++) {
+	for (i = 0; i < length; i++) {
 		char ch = rec[i];
 		if (ch == '0') {
 			result[0]++;
@@ -67,9 +68,10 @@ void count(char rec[]) {//传入的是字符数组
 		}
 	}
 
-	for (int i = 0; i < 10; i++) {//先打印数字的那几行
-		printf("Number %d: %d\n",i,result[i]);
+	for (i = 0; i < 10; i++) {//先打印数字的那几行
+		printf("Number %d: %d\n", i, result[i]);
 	}
 	printf("characters: %d\n", result[10]);//打印字符计数器
-	printf("others: %d\n\n", result[11]);//others
+	printf("other: %d\n\n", result[11]);//others
 }
+
