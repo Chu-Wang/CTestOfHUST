@@ -8,9 +8,10 @@ int main() {
 	int caseNum = 0;
 	while (scanf("%d", &N) != EOF) {
 		caseNum++;
-		for (int i = 0; i < N; i++) {
+		int i = 0;
+		for (i = 0; i < N; i++) {
 			scanf("%d", &rec[i]);
-			
+
 		}
 		getchar();
 		seclectSort(rec, N, caseNum);//调用选择排序函数
@@ -21,16 +22,18 @@ int main() {
 }
 
 void seclectSort(int arr[], int length, int caseNum) {//arr[]为待排序的数组，length是该数组的长度
+	int i = 0, k;
 	printf("CASE %d:\n", caseNum);
-	printf("Original data: ");
-	for (int i = 0; i < length; i++) {
-		printf("%4d", arr[i]);
+	printf("Original data:");
+	for (i = 0; i < length; i++) {
+		printf("%5d", arr[i]);
 	}
 	printf("\n");
-	for (int i = 0; i < length - 1; i++) {
+	for (i = 0; i < length - 1; i++) {
 		int minIndex = i;//用于记录最小值的下标，初始为0
 		int min = arr[i];//用于记录最小值，初始值为arr[0]
-		for (int j = i + 1; j < length; j++) {
+		int j;
+		for (j = i + 1; j < length; j++) {
 			if (min > arr[j]) {//如果找到比假定的min还要小的值，那么需要更新最小值
 				min = arr[j];
 				minIndex = j;
@@ -41,12 +44,12 @@ void seclectSort(int arr[], int length, int caseNum) {//arr[]为待排序的数�
 			arr[minIndex] = arr[i];
 			arr[i] = min;
 		}
-		printf("After turn %2d: ", i + 1);
-		for (int i = 0; i < length; i++) {
-			printf("%4d", arr[i]);
+		printf("After turn %2d:", i + 1);
+		for (k = 0; k < length; k++) {
+			printf("%5d", arr[k]);
 		}
 		printf("\n");
-		
+
 	}
 	printf("\n");
 	/*for (int i = 0; i < length - 1; i++) {//假如数组有三个数，则先输出两个数，数字后面带有空格
